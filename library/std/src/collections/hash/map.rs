@@ -972,6 +972,8 @@ where
     /// map.insert("c", 3);
     ///
     /// let vec: Vec<&str> = map.into_keys().collect();
+    /// vec.sort_unstable();
+    /// assert_eq!(vec, ["a", "b", "c"]);
     /// ```
     #[inline]
     #[stable(feature = "map_into_keys_values", since = "1.54.0")]
@@ -994,6 +996,8 @@ where
     /// map.insert("c", 3);
     ///
     /// let vec: Vec<i32> = map.into_values().collect();
+    /// vec.sort_unstable();
+    /// assert_eq!(vec, [1, 2, 3]);
     /// ```
     #[inline]
     #[stable(feature = "map_into_keys_values", since = "1.54.0")]
