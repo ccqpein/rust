@@ -968,10 +968,10 @@ where
     ///
     /// let mut map = HashMap::new();
     /// map.insert("a", 1);
-    /// map.insert("b", 2);
     /// map.insert("c", 3);
+    /// map.insert("b", 2);
     ///
-    /// let vec: Vec<&str> = map.into_keys().collect();
+    /// let mut vec: Vec<&str> = map.into_keys().collect();
     /// vec.sort_unstable();
     /// assert_eq!(vec, ["a", "b", "c"]);
     /// ```
@@ -992,10 +992,10 @@ where
     ///
     /// let mut map = HashMap::new();
     /// map.insert("a", 1);
-    /// map.insert("b", 2);
     /// map.insert("c", 3);
+    /// map.insert("b", 2);
     ///
-    /// let vec: Vec<i32> = map.into_values().collect();
+    /// let mut vec: Vec<i32> = map.into_values().collect();
     /// vec.sort_unstable();
     /// assert_eq!(vec, [1, 2, 3]);
     /// ```
