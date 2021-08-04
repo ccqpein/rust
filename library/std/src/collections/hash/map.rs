@@ -968,10 +968,12 @@ where
     ///
     /// let mut map = HashMap::new();
     /// map.insert("a", 1);
-    /// map.insert("c", 3);
     /// map.insert("b", 2);
+    /// map.insert("c", 3);
     ///
     /// let mut vec: Vec<&str> = map.into_keys().collect();
+    /// // The `IntoKeys` iterator produces keys in arbitrary order, so the
+    /// // keys must be sorted to test them against a sorted array.
     /// vec.sort_unstable();
     /// assert_eq!(vec, ["a", "b", "c"]);
     /// ```
@@ -992,10 +994,12 @@ where
     ///
     /// let mut map = HashMap::new();
     /// map.insert("a", 1);
-    /// map.insert("c", 3);
     /// map.insert("b", 2);
+    /// map.insert("c", 3);
     ///
     /// let mut vec: Vec<i32> = map.into_values().collect();
+    /// // The `IntoValues` iterator produces values in arbitrary order, so
+    /// // the values must be sorted to test them against a sorted array.
     /// vec.sort_unstable();
     /// assert_eq!(vec, [1, 2, 3]);
     /// ```
